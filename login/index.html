@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign in</title>
+</head>
+
+<body>
+    <div class="login-background">
+        
+        <div class="login-container">
+            <div class="logo-container">
+                <div class="logo"></div>
+
+            </div>
+            <div class="company">
+                <div class="company-name">PHARMA DATUM</div>
+            </div>
+            <div class="content-container">
+                <div class="content">
+                    <div class="display-text">Email</div>
+                    <div class="input-box">
+                        <input type="text">
+                    </div>
+                    <div class="error-message">Enter the user name</div>
+                </div>
+                <div class="content">
+                    <div class="display-text">Password</div>
+                    <div class="input-box">
+                        <input type="password">
+                        <div class="show-pwd">
+                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="m11.998 5c-4.078 0-7.742 3.093-9.853 6.483-.096.159-.145.338-.145.517s.048.358.144.517c2.112 3.39 5.776 6.483 9.854 6.483 4.143 0 7.796-3.09 9.864-6.493.092-.156.138-.332.138-.507s-.046-.351-.138-.507c-2.068-3.403-5.721-6.493-9.864-6.493zm.002 3c2.208 0 4 1.792 4 4s-1.792 4-4 4-4-1.792-4-4 1.792-4 4-4zm0 1.5c1.38 0 2.5 1.12 2.5 2.5s-1.12 2.5-2.5 2.5-2.5-1.12-2.5-2.5 1.12-2.5 2.5-2.5z"
+                                fill-rule="nonzero" />
+                        </svg>
+                        </div>
+                        
+                    </div>
+                    <div class="space-btw">
+                        
+                        <div class="error-message">Enter the user name</div>
+                        <div class="forgot-password">Forget password?</div>
+                    </div>
+                    
+                </div>
+                <div class="action">
+                <button class="btn login-btn"><div class="loader"></div><span>Sign in</span></button>
+                <a href="/login/activate-email.html" class="create-accnt">Doesn't have account?
+                <strong>Sign Up</strong></a>
+</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.querySelector(".login-btn").addEventListener("click", function () {
+
+        const loader = this.querySelector(".loader");
+
+
+        loader.classList.add("active");
+
+        // After 2 seconds, show the icon again and hide the loader
+        setTimeout(function () {
+            loader.classList.remove("active");
+           
+        }, 1000); // 2000ms = 2 seconds
+    });
+
+
+</script>
+</html>

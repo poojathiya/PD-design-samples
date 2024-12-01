@@ -1,0 +1,17 @@
+
+.company {
+
+    top: 8%
+}
+
+.login-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.login-btn .icon {
+    fill: #f0f0f0;
+    position: relative;
+}
