@@ -17,7 +17,9 @@ padding: 0;
     color: #868e96;
     margin-left: .6rem
 }
-
+.terms{
+    gap: 1rem;
+}
 .policy .condition:hover{
     text-decoration: underline;
 }
