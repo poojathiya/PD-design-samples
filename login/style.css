@@ -54,26 +54,28 @@ body {
     border-radius: 1.2rem;
     width: 40rem;
     height: auto;
-    background-color: #f0f0f0
+    background-color: rgba(240, 240, 240, 0.769)
 }
 
 .logo-container {
     width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-    top: 0;
+    height: 5rem;
+    border-radius: 10rem 10rem 0 0;
+    top: -2.4rem;
     overflow: hidden;
-    background: #f0f0f0
+    background-color: rgba(240, 240, 240, 0.769);
 }
 
 .logo {
-    background-image: url('/login/img/logo.png');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 80%;
-    height: 80%;
-    margin: auto
+   
+    width: 20%;
+    height:20%;
+    margin: auto;
+    position: relative;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -76%);
+
 }
 
 .company {
@@ -121,7 +123,7 @@ body {
 }
 
 .input-box input {
-    border: 1px solid #002966;
+    border: 1px solid #868e96;
     border-radius: 1.9rem;
     outline: 0;
     background-color: #f0f0f0;
@@ -134,7 +136,7 @@ body {
 }
 
 .input-box input:focus {
-    border: 2px solid #002966;
+    border: 2px solid #868e96;
     background-color: #e6ebf2
 }
 
@@ -167,7 +169,7 @@ body {
 }
 
 .forgot-password:hover {
-    color: #003380;
+    color: #0076d7;
     text-decoration: underline
 }
 
@@ -192,7 +194,7 @@ body {
     border: none;
     padding: 1.4rem 3.6rem;
     margin: 2rem auto 1rem;
-    background-color: #003380;
+    background-color: #0076d7;
     color: #f0f0f0;
     border-radius: 39px;
     font-weight: 500;
@@ -216,7 +218,7 @@ body {
 }
 
 .create-accnt strong {
-    color: #003380
+    color: #0076d7
 }
 
 .loader {

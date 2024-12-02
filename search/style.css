@@ -1,0 +1,28 @@
+/* Import Google Fonts */
+@import url(https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap);
+
+/* Reset and Global Styles */
+*,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /* Base font size (10px = 1rem) */
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: Outfit, sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: #555;
+    /* Text color */
+    overflow-x: hidden;
+    /* Prevent horizontal overflow */
+}
+
