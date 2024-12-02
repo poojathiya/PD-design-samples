@@ -54,22 +54,22 @@ body {
     border-radius: 1.2rem;
     width: 40rem;
     height: auto;
-    background-color: rgba(240, 240, 240, 0.769)
+    background-color: rgba(240, 240, 240, 0.948)
 }
 
 .logo-container {
-    width: 10rem;
-    height: 5rem;
+width: 12rem;
+    height: 6rem;
     border-radius: 10rem 10rem 0 0;
-    top: -2.4rem;
+    top: -2.95rem;
     overflow: hidden;
-    background-color: rgba(240, 240, 240, 0.769);
+    background-color: rgba(240, 240, 240, 0.948);
 }
 
 .logo {
    
-    width: 20%;
-    height:20%;
+    width: 25%;
+    height:25%;
     margin: auto;
     position: relative;
         top: 0;
@@ -85,13 +85,14 @@ body {
 }
 
 .company-name {
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-weight: 600;
-    color: #003380
+    color: #003380;
+    margin-top: 2rem;
 }
 
 .content-container {
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
     padding: 2.4rem 0;
     display: flex;
     flex-direction: column;
@@ -112,7 +113,7 @@ body {
 }
 
 .display-text {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 500;
     color: #343a40
 }

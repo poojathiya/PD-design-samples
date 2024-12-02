@@ -3,7 +3,7 @@
 #f0f0f0 — Used for background colors (e.g., .login-background, .login-container, .logo-container, etc.),
 text color in .forgot-password,
 and the background color of the login form inputs. 
-
+#0076d7
 #002966 — Used for the border color in input fields (border: 1px solid 
 #e6ebf2 — Used as the background color on input focus (background-color: #e6ebf2).
 #868e96 — Used for text color in .forgot-password,

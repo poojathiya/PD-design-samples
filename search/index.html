@@ -7,6 +7,153 @@
     <title>Document</title>
 </head>
 <body>
+<div class="search-container">
+    <div class="tab-trigger">
+        <ul>
+            <li [ngClass]="{ active: activeTab === 'find-supplier' }" (click)="setActiveTab('find-supplier')">
+                FIND SUPPLIER
+            </li>
+            <li [ngClass]="{ active: activeTab === 'find-customer' }" (click)="setActiveTab('find-customer')">
+                FIND CUSTOMER
+            </li>
+            <li [ngClass]="{ active: activeTab === 'surplus' }" (click)="setActiveTab('surplus')">
+                SURPLUS
+            </li>
+            <li [ngClass]="{ active: activeTab === 'trade-analytics' }" (click)="setActiveTab('trade-analytics')">
+                TRADE ANALYTICS
+            </li>
+            <li [ngClass]="{ active: activeTab === 'impurities' }" (click)="setActiveTab('impurities')">
+                IMPURITIES
+            </li>
+        </ul>
+    </div>
+    
 
+    <div class="search-boxes">
+        <div class="input-box">
+            <input type="text">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"  viewBox="0 0 256 256">
+                    <path
+                        d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z">
+                    </path>
+                </svg>
+            </div>
+            <label for="">CAS Number</label>
+        </div>
+        <span class="text">(or)</span>
+        <div class="input-box">
+            <input type="text">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256">
+                    <path
+                        d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z">
+                    </path>
+                </svg>
+            </div>
+            <label for="">Chemical Name</label>
+        </div>
+        <span class="text">(or)</span>
+        <div class="input-box">
+            <input type="text">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256">
+                    <path
+                        d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z">
+                    </path>
+                </svg>
+            </div>
+            <label for="">Company Name</label>
+        </div>
+        <span class="line"></span>
+        <div class="input-box">
+            <input type="text">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256">
+                    <path
+                        d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z">
+                    </path>
+                </svg>
+            </div>
+            <label for="">Country</label>
+        </div>
+        <button class="btn search-btn">
+            <div class="btn-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#f0f0f0" viewBox="0 0 256 256">
+                    <path
+                        d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z">
+                    </path>
+                </svg>
+            </div>
+            <span>Sign in</span>
+        </button>
+        <span class="reset" (click)="resetAll()" *ngIf="showAd">Reset</span>
+    </div>
+</div>
+<div class="search-results">
+    
+    <div class="search-header">
+        <ul class="filter-options">
+          <li class="item"><span>Country</span> <div class="caret-down">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                <path d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z">
+                </path>
+            </svg>
+          </div></li>
+        <li class="item"><span>DMF</span>
+            <div class="caret-down">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                    <path
+                        d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z">
+                    </path>
+                </svg>
+            </div>
+        </li>
+        <li class="item"><span>Regulatory</span>
+            <div class="caret-down">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                    <path
+                        d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z">
+                    </path>
+                </svg>
+            </div>
+        </li>
+        <li class="item"><span>Type</span>
+            <div class="caret-down">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                    <path
+                        d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z">
+                    </path>
+                </svg>
+            </div>
+        </li>
+        </ul>
+        
+        <div class="filter-hearder">
+        <div class="filter-actions">
+          <button class="btn filter-btn">
+            <div class="btn-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                <path
+                    d="M234.29,47.91A20,20,0,0,0,216,36H40A20,20,0,0,0,25.2,69.45l.12.14L92,140.75V216a20,20,0,0,0,31.1,16.64l32-21.33A20,20,0,0,0,164,194.66V140.75l66.67-71.16.12-.14A20,20,0,0,0,234.29,47.91Zm-91,79.89A12,12,0,0,0,140,136v56.52l-24,16V136a12,12,0,0,0-3.25-8.2L49.23,60H206.77Z">
+                </path>
+            </svg>
+          </div> <span class="text">Filter</span></button>
+        <button class="btn clear-btn">
+            <span class="text">Clear</span>
+        </button>
+        </div>
+    <button class="btn back-btn" style="display: none;">
+        <div class="btn-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                <path d="M168.49,199.51a12,12,0,0,1-17,17l-80-80a12,12,0,0,1,0-17l80-80a12,12,0,0,1,17,17L97,128Z"></path>
+            </svg>
+        </div> <span class="text">Back</span>
+    </button>
+        </div>
+    </div>
+    
+    <div class="ads"></div>
+</div>
 </body>
 </html>
