@@ -8,14 +8,11 @@ top: 3%;
 }
 
 .content-container {
-
-    gap:.6rem 
+padding: 0;
+    gap:.6rem ;
+    margin-top: 6rem;
 }
 
-
-.login-btn {
-    margin-top: 1rem;
-}
 .policy {
     color: #868e96;
     margin-left: .6rem

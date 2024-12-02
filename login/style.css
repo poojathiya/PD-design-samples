@@ -207,19 +207,20 @@ body {
 
 .error-message {
     font-size: 1.2rem;
-    color: #868e96;
-  display: none
+    color: #ff6b6b;
+display: none;
 }
 
 .forgot-password {
 
     font-size: 1.2rem;
     font-weight: 500;
-    color: #003380;
+   color:#868e96;
     margin-left: auto;
     cursor: pointer;
 }
 .forgot-password:hover{
+    color: #003380;
     text-decoration: underline;
 }
 
@@ -253,6 +254,7 @@ body {
     justify-content: center;
     gap: 1rem;
     font-size: 1.6rem;
+    margin-top: 2rem;
 
 }
 
@@ -332,7 +334,7 @@ body {
     
 
     html {
-        font-size: 50%;
+        font-size: 55%;
     }
 
 }
