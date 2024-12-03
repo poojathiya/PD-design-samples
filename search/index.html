@@ -1,159 +1,458 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body>
-<div class="search-container">
-    <div class="tab-trigger">
-        <ul>
-            <li [ngClass]="{ active: activeTab === 'find-supplier' }" (click)="setActiveTab('find-supplier')">
-                FIND SUPPLIER
-            </li>
-            <li [ngClass]="{ active: activeTab === 'find-customer' }" (click)="setActiveTab('find-customer')">
-                FIND CUSTOMER
-            </li>
-            <li [ngClass]="{ active: activeTab === 'surplus' }" (click)="setActiveTab('surplus')">
-                SURPLUS
-            </li>
-            <li [ngClass]="{ active: activeTab === 'trade-analytics' }" (click)="setActiveTab('trade-analytics')">
-                TRADE ANALYTICS
-            </li>
-            <li [ngClass]="{ active: activeTab === 'impurities' }" (click)="setActiveTab('impurities')">
-                IMPURITIES
-            </li>
-        </ul>
-    </div>
-    
 
-    <div class="search-boxes">
-        <div class="input-box">
-            <input type="text">
-            <div class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"  viewBox="0 0 256 256">
-                    <path
-                        d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z">
-                    </path>
-                </svg>
-            </div>
-            <label for="">CAS Number</label>
+<body>
+    <div class="search-container">
+        <div class="tab-trigger">
+            <ul>
+                <li [ngClass]="{ active: activeTab === 'find-supplier' }" (click)="setActiveTab('find-supplier')">
+                    FIND SUPPLIER
+                </li>
+                <li [ngClass]="{ active: activeTab === 'find-customer' }" (click)="setActiveTab('find-customer')">
+                    FIND CUSTOMER
+                </li>
+                <li [ngClass]="{ active: activeTab === 'surplus' }" (click)="setActiveTab('surplus')">
+                    SURPLUS
+                </li>
+                <li [ngClass]="{ active: activeTab === 'trade-analytics' }" (click)="setActiveTab('trade-analytics')">
+                    TRADE ANALYTICS
+                </li>
+                <li [ngClass]="{ active: activeTab === 'impurities' }" (click)="setActiveTab('impurities')">
+                    IMPURITIES
+                </li>
+            </ul>
         </div>
-        <span class="text">(or)</span>
-        <div class="input-box">
-            <input type="text">
-            <div class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256">
-                    <path
-                        d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z">
-                    </path>
-                </svg>
+
+
+        <div class="search-boxes">
+            <div class="input-box">
+                <input type="text">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256">
+                        <path
+                            d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z">
+                        </path>
+                    </svg>
+                </div>
+                <label for="">CAS Number</label>
             </div>
-            <label for="">Chemical Name</label>
-        </div>
-        <span class="text">(or)</span>
-        <div class="input-box">
-            <input type="text">
-            <div class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256">
-                    <path
-                        d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z">
-                    </path>
-                </svg>
+            <span class="text">(or)</span>
+            <div class="input-box">
+                <input type="text">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256">
+                        <path
+                            d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z">
+                        </path>
+                    </svg>
+                </div>
+                <label for="">Chemical Name</label>
             </div>
-            <label for="">Company Name</label>
-        </div>
-        <span class="line"></span>
-        <div class="input-box">
-            <input type="text">
-            <div class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256">
-                    <path
-                        d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z">
-                    </path>
-                </svg>
+            <span class="text">(or)</span>
+            <div class="input-box">
+                <input type="text">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256">
+                        <path
+                            d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z">
+                        </path>
+                    </svg>
+                </div>
+                <label for="">Company Name</label>
             </div>
-            <label for="">Country</label>
-        </div>
-        <button class="btn search-btn">
-            <div class="btn-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#f0f0f0" viewBox="0 0 256 256">
-                    <path
-                        d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z">
-                    </path>
-                </svg>
+            <span class="line"></span>
+            <div class="input-box">
+                <input type="text">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256">
+                        <path
+                            d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z">
+                        </path>
+                    </svg>
+                </div>
+                <label for="">Country</label>
             </div>
-            <span>Sign in</span>
-        </button>
-        <span class="reset" (click)="resetAll()" *ngIf="showAd">Reset</span>
-    </div>
-</div>
-<div class="search-results">
-    
-    <div class="search-header">
-        <ul class="filter-options">
-          <li class="item"><span>Country</span> <div class="caret-down">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
-                <path d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z">
-                </path>
-            </svg>
-          </div></li>
-        <li class="item"><span>DMF</span>
-            <div class="caret-down">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
-                    <path
-                        d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z">
-                    </path>
-                </svg>
-            </div>
-        </li>
-        <li class="item"><span>Regulatory</span>
-            <div class="caret-down">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
-                    <path
-                        d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z">
-                    </path>
-                </svg>
-            </div>
-        </li>
-        <li class="item"><span>Type</span>
-            <div class="caret-down">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
-                    <path
-                        d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z">
-                    </path>
-                </svg>
-            </div>
-        </li>
-        </ul>
-        
-        <div class="filter-hearder">
-        <div class="filter-actions">
-          <button class="btn filter-btn">
-            <div class="btn-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
-                <path
-                    d="M234.29,47.91A20,20,0,0,0,216,36H40A20,20,0,0,0,25.2,69.45l.12.14L92,140.75V216a20,20,0,0,0,31.1,16.64l32-21.33A20,20,0,0,0,164,194.66V140.75l66.67-71.16.12-.14A20,20,0,0,0,234.29,47.91Zm-91,79.89A12,12,0,0,0,140,136v56.52l-24,16V136a12,12,0,0,0-3.25-8.2L49.23,60H206.77Z">
-                </path>
-            </svg>
-          </div> <span class="text">Filter</span></button>
-        <button class="btn clear-btn">
-            <span class="text">Clear</span>
-        </button>
-        </div>
-    <button class="btn back-btn" style="display: none;">
-        <div class="btn-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
-                <path d="M168.49,199.51a12,12,0,0,1-17,17l-80-80a12,12,0,0,1,0-17l80-80a12,12,0,0,1,17,17L97,128Z"></path>
-            </svg>
-        </div> <span class="text">Back</span>
-    </button>
+            <button class="btn search-btn">
+                <div class="btn-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#f0f0f0" viewBox="0 0 256 256">
+                        <path
+                            d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z">
+                        </path>
+                    </svg>
+                </div>
+                <span>Sign in</span>
+            </button>
+            <span class="reset" (click)="resetAll()" *ngIf="showAd">Reset</span>
         </div>
     </div>
-    
-    <div class="ads"></div>
-</div>
+    <div class="search-results">
+        <div class="search-result">
+            <div class="search-header">
+                <ul class="filter-options">
+                    <li class="filter-item"><span>Country</span>
+                        <div class="caret-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000"
+                                viewBox="0 0 256 256">
+                                <path
+                                    d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z">
+                                </path>
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="filter-item"><span>DMF</span>
+                        <div class="caret-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000"
+                                viewBox="0 0 256 256">
+                                <path
+                                    d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z">
+                                </path>
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="filter-item"><span>Regulatory</span>
+                        <div class="caret-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000"
+                                viewBox="0 0 256 256">
+                                <path
+                                    d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z">
+                                </path>
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="filter-item"><span>Type</span>
+                        <div class="caret-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000"
+                                viewBox="0 0 256 256">
+                                <path
+                                    d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z">
+                                </path>
+                            </svg>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="filter-header-actions">
+                    <div class="filter-actions">
+                        <button class="btn filter-btn">
+                            <div class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000"
+                                    viewBox="0 0 256 256">
+                                    <path
+                                        d="M234.29,47.91A20,20,0,0,0,216,36H40A20,20,0,0,0,25.2,69.45l.12.14L92,140.75V216a20,20,0,0,0,31.1,16.64l32-21.33A20,20,0,0,0,164,194.66V140.75l66.67-71.16.12-.14A20,20,0,0,0,234.29,47.91Zm-91,79.89A12,12,0,0,0,140,136v56.52l-24,16V136a12,12,0,0,0-3.25-8.2L49.23,60H206.77Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="btn-text">Filter</span>
+                        </button>
+                    </div>
+
+                    <button class="btn clear-btn">
+                        <span class="btn-text">Clear</span>
+                    </button>
+                </div>
+
+                <button class="btn back-btn" style="display: none;">
+                    <div class="btn-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000"
+                            viewBox="0 0 256 256">
+                            <path
+                                d="M168.49,199.51a12,12,0,0,1-17,17l-80-80a12,12,0,0,1,0-17l80-80a12,12,0,0,1,17,17L97,128Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span class="btn-text">Back</span>
+                </button>
+            </div>
+
+            <div class="search-sub-header">
+                <div class="form-check tooltip-container">
+                    <input class="form-check-input" type="checkbox" id="selectAllCheckbox" [(ngModel)]="isSelectAll"
+                        (change)="toggleSelectAll()" [disabled]="!isLoggedIn" />
+                    <div class="form-check-label" for="selectAllCheckbox">
+                        Select All
+                    </div>
+                </div>
+
+                <div class="info-text">
+                    <div class="content-item">
+                        <div class="label">Suppliers Found:</div>
+                        <div class="value">124</div>
+                    </div>
+                    <div class="content-item">
+                        <div class="label">CAS Number:</div>
+                        <div class="value">99946-61-9-61-9</div>
+                    </div>
+                    <div class="content-item">
+                        <div class="label">Chemical Name:</div>
+                        <div class="value">4-Oxazoleacetic acid, 2-(4-chlo 4-Oxazoleacetic acid, 2-(4-chlo))</div>
+                    </div>
+                </div>
+
+                <button class="btn enquiry-btn">
+                    <div class="btn-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M18.72 14.7599C19.07 13.9099 19.26 12.9999 19.26 11.9999C19.26 11.2799 19.15 10.5899 18.96 9.94995C18.31 10.0999 17.63 10.1799 16.92 10.1799C15.466 10.1815 14.0329 9.83347 12.7415 9.16517C11.4502 8.49687 10.3384 7.5279 9.5 6.33995C8.60396 8.51069 6.91172 10.2566 4.77 11.2199C4.73 11.4699 4.73 11.7399 4.73 11.9999C4.73 12.9547 4.91804 13.9 5.2834 14.7821C5.64875 15.6641 6.18425 16.4655 6.85933 17.1406C8.22272 18.504 10.0719 19.2699 12 19.2699C13.05 19.2699 14.06 19.0399 14.97 18.6299C15.54 19.7199 15.8 20.2599 15.78 20.2599C14.14 20.8099 12.87 21.0799 12 21.0799C9.58 21.0799 7.27 20.1299 5.57 18.4199C4.53505 17.3899 3.76627 16.1234 3.33 14.7299H2V10.1799H3.09C3.42024 8.57246 4.17949 7.08436 5.28719 5.87354C6.39489 4.66272 7.80971 3.77435 9.38153 3.30271C10.9534 2.83106 12.6235 2.79372 14.2149 3.19465C15.8062 3.59559 17.2593 4.41984 18.42 5.57995C19.6798 6.83553 20.5393 8.43623 20.89 10.1799H22V14.7299H21.94L18.38 17.9999L13.08 17.3999V15.7299H17.91L18.72 14.7599ZM9.27 11.7699C9.57 11.7699 9.86 11.8899 10.07 12.1099C10.281 12.3227 10.3995 12.6103 10.3995 12.9099C10.3995 13.2096 10.281 13.4972 10.07 13.7099C9.86 13.9199 9.57 14.0399 9.27 14.0399C8.64 14.0399 8.13 13.5399 8.13 12.9099C8.13 12.2799 8.64 11.7699 9.27 11.7699ZM14.72 11.7699C15.35 11.7699 15.85 12.2799 15.85 12.9099C15.85 13.5399 15.35 14.0399 14.72 14.0399C14.09 14.0399 13.58 13.5399 13.58 12.9099C13.58 12.6076 13.7001 12.3176 13.9139 12.1038C14.1277 11.8901 14.4177 11.7699 14.72 11.7699Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <span class="btn-text">Bulk Enquiry</span>
+                </button>
+            </div>
+            <div class="search-cas-result is-premium">
+                <div class="form-check tooltip-container">
+                    <input class="form-check-input" type="checkbox" id="selectAllCheckbox" />
+
+                </div>
+                <div class="cas-company-container">
+                    <div class="company-logo-container">
+                        <div class="premium-badge">
+                            <div class="premium-logo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22"
+                                    fill="none">
+                                    <g filter="url(#filter0_d_1336_4784)">
+                                        <path
+                                            d="M5.29167 14.6667L3.375 4.58341L8.64583 9.16675L12 3.66675L15.3542 9.16675L20.625 4.58341L18.7083 14.6667H5.29167ZM18.7083 17.4167C18.7083 17.9667 18.325 18.3334 17.75 18.3334H6.25C5.675 18.3334 5.29167 17.9667 5.29167 17.4167V16.5001H18.7083V17.4167Z"
+                                            fill="#FFB53E" />
+                                        <path
+                                            d="M5.49862 14.4167L3.75531 5.24542L8.48179 9.3554L8.70515 9.54963L8.85927 9.29691L12 4.1469L15.1407 9.29691L15.2948 9.54963L15.5182 9.3554L20.2447 5.24542L18.5014 14.4167H5.49862ZM18.4583 17.4167C18.4583 17.6315 18.3849 17.7927 18.272 17.9007C18.1581 18.0096 17.9839 18.0834 17.75 18.0834H6.25C6.01607 18.0834 5.84193 18.0096 5.72801 17.9007C5.6151 17.7927 5.54167 17.6315 5.54167 17.4167V16.7501H18.4583V17.4167Z"
+                                            stroke="white" stroke-width="0.5" />
+                                    </g>
+                                    <defs>
+                                        <filter id="filter0_d_1336_4784" x="1.375" y="2.66675" width="21.25"
+                                            height="18.6667" filterUnits="userSpaceOnUse"
+                                            color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                            <feOffset dy="1" />
+                                            <feGaussianBlur stdDeviation="1" />
+                                            <feComposite in2="hardAlpha" operator="out" />
+                                            <feColorMatrix type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                                            <feBlend mode="normal" in2="BackgroundImageFix"
+                                                result="effect1_dropShadow_1336_4784" />
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1336_4784"
+                                                result="shape" />
+                                        </filter>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <span>PREMIUM</span>
+
+                        </div>
+                        <div class="logo">
+                            <img src="/login/img/no-image.png" alt="" class="no-image">
+                        </div>
+                    </div>
+                    <div class="company-detail">
+                        <div class="header">
+                            <div class="details">
+                                <span class="company-name">MedPlus Pharmacy,</span>
+                                <div class="company-location">Agra</div>
+                            </div>
+
+                            <button class="btn single-enquiry-btn">
+                                <div class="btn-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M18.72 14.7599C19.07 13.9099 19.26 12.9999 19.26 11.9999C19.26 11.2799 19.15 10.5899 18.96 9.94995C18.31 10.0999 17.63 10.1799 16.92 10.1799C15.466 10.1815 14.0329 9.83347 12.7415 9.16517C11.4502 8.49687 10.3384 7.5279 9.5 6.33995C8.60396 8.51069 6.91172 10.2566 4.77 11.2199C4.73 11.4699 4.73 11.7399 4.73 11.9999C4.73 12.9547 4.91804 13.9 5.2834 14.7821C5.64875 15.6641 6.18425 16.4655 6.85933 17.1406C8.22272 18.504 10.0719 19.2699 12 19.2699C13.05 19.2699 14.06 19.0399 14.97 18.6299C15.54 19.7199 15.8 20.2599 15.78 20.2599C14.14 20.8099 12.87 21.0799 12 21.0799C9.58 21.0799 7.27 20.1299 5.57 18.4199C4.53505 17.3899 3.76627 16.1234 3.33 14.7299H2V10.1799H3.09C3.42024 8.57246 4.17949 7.08436 5.28719 5.87354C6.39489 4.66272 7.80971 3.77435 9.38153 3.30271C10.9534 2.83106 12.6235 2.79372 14.2149 3.19465C15.8062 3.59559 17.2593 4.41984 18.42 5.57995C19.6798 6.83553 20.5393 8.43623 20.89 10.1799H22V14.7299H21.94L18.38 17.9999L13.08 17.3999V15.7299H17.91L18.72 14.7599ZM9.27 11.7699C9.57 11.7699 9.86 11.8899 10.07 12.1099C10.281 12.3227 10.3995 12.6103 10.3995 12.9099C10.3995 13.2096 10.281 13.4972 10.07 13.7099C9.86 13.9199 9.57 14.0399 9.27 14.0399C8.64 14.0399 8.13 13.5399 8.13 12.9099C8.13 12.2799 8.64 11.7699 9.27 11.7699ZM14.72 11.7699C15.35 11.7699 15.85 12.2799 15.85 12.9099C15.85 13.5399 15.35 14.0399 14.72 14.0399C14.09 14.0399 13.58 13.5399 13.58 12.9099C13.58 12.6076 13.7001 12.3176 13.9139 12.1038C14.1277 11.8901 14.4177 11.7699 14.72 11.7699Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <span class="btn-text">Enquiry</span>
+                            </button>
+                        </div>
+                        <div class="body">
+                            <div class="dmfs">
+                                sd
+                            </div>
+                            <div class="regulations">
+                                dsf
+                            </div>
+                            <div class="resources">
+                                <ul class="links">
+                                    <li class="link">
+                                        <div class="link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="#000000" viewBox="0 0 256 256">
+                                                <path
+                                                    d="M232,152a12,12,0,0,1-12,12h-8v44a12,12,0,0,1-24,0V164h-8a12,12,0,0,1,0-24h40A12,12,0,0,1,232,152ZM92,172a32,32,0,0,1-32,32H56v4a12,12,0,0,1-24,0V152a12,12,0,0,1,12-12H60A32,32,0,0,1,92,172Zm-24,0a8,8,0,0,0-8-8H56v16h4A8,8,0,0,0,68,172Zm96,0a32,32,0,0,1-32,32h-4v4a12,12,0,0,1-24,0V152a12,12,0,0,1,12-12h16A32,32,0,0,1,164,172Zm-24,0a8,8,0,0,0-8-8h-4v16h4A8,8,0,0,0,140,172ZM36,108V40A20,20,0,0,1,56,20h96a12,12,0,0,1,8.49,3.52l56,56A12,12,0,0,1,220,88v20a12,12,0,0,1-24,0v-4H148a12,12,0,0,1-12-12V44H60v64a12,12,0,0,1-24,0ZM160,80h23L160,57Z">
+                                                </path>
+                                            </svg></div>
+                                        <div class="link-text">Presentation</div>
+                                    </li>
+                                    <li class="link">
+                                        <div class="link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="#000000" viewBox="0 0 256 256">
+                                                <path
+                                                    d="M216,36H40A20,20,0,0,0,20,56V200a20,20,0,0,0,20,20H216a20,20,0,0,0,20-20V56A20,20,0,0,0,216,36Zm-4,160H44V60H212ZM68,92A12,12,0,0,1,80,80h96a12,12,0,0,1,0,24H80A12,12,0,0,1,68,92Zm0,36a12,12,0,0,1,12-12h96a12,12,0,0,1,0,24H80A12,12,0,0,1,68,128Zm0,36a12,12,0,0,1,12-12h96a12,12,0,0,1,0,24H80A12,12,0,0,1,68,164Z">
+                                                </path>
+                                            </svg></div>
+                                        <div class="link-text">Broucher</div>
+                                    </li>
+                                    <li class="link">
+                                        <div class="link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="#000000" viewBox="0 0 256 256">
+                                                <path
+                                                    d="M232,44H160a43.86,43.86,0,0,0-32,13.85A43.86,43.86,0,0,0,96,44H24A12,12,0,0,0,12,56V200a12,12,0,0,0,12,12H96a20,20,0,0,1,20,20,12,12,0,0,0,24,0,20,20,0,0,1,20-20h72a12,12,0,0,0,12-12V56A12,12,0,0,0,232,44ZM96,188H36V68H96a20,20,0,0,1,20,20V192.81A43.79,43.79,0,0,0,96,188Zm124,0H160a43.71,43.71,0,0,0-20,4.83V88a20,20,0,0,1,20-20h60ZM164,96h32a12,12,0,0,1,0,24H164a12,12,0,0,1,0-24Zm44,52a12,12,0,0,1-12,12H164a12,12,0,0,1,0-24h32A12,12,0,0,1,208,148Z">
+                                                </path>
+                                            </svg></div>
+                                        <div class="link-text">Catelogue</div>
+                                    </li>
+                                    <li class="link">
+                                        <div class="link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="#000000" viewBox="0 0 256 256">
+                                                <path
+                                                    d="M168,120a12,12,0,0,1-5.12,9.83l-40,28A12,12,0,0,1,104,148V92a12,12,0,0,1,18.88-9.83l40,28A12,12,0,0,1,168,120Zm68-56V176a28,28,0,0,1-28,28H48a28,28,0,0,1-28-28V64A28,28,0,0,1,48,36H208A28,28,0,0,1,236,64Zm-24,0a4,4,0,0,0-4-4H48a4,4,0,0,0-4,4V176a4,4,0,0,0,4,4H208a4,4,0,0,0,4-4ZM160,216H96a12,12,0,0,0,0,24h64a12,12,0,0,0,0-24Z">
+                                                </path>
+                                            </svg></div>
+                                        <div class="link-text">Video</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mobile-enquiry">
+                                <button class="btn single-enquiry-btn">
+                                    <div class="btn-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M18.72 14.7599C19.07 13.9099 19.26 12.9999 19.26 11.9999C19.26 11.2799 19.15 10.5899 18.96 9.94995C18.31 10.0999 17.63 10.1799 16.92 10.1799C15.466 10.1815 14.0329 9.83347 12.7415 9.16517C11.4502 8.49687 10.3384 7.5279 9.5 6.33995C8.60396 8.51069 6.91172 10.2566 4.77 11.2199C4.73 11.4699 4.73 11.7399 4.73 11.9999C4.73 12.9547 4.91804 13.9 5.2834 14.7821C5.64875 15.6641 6.18425 16.4655 6.85933 17.1406C8.22272 18.504 10.0719 19.2699 12 19.2699C13.05 19.2699 14.06 19.0399 14.97 18.6299C15.54 19.7199 15.8 20.2599 15.78 20.2599C14.14 20.8099 12.87 21.0799 12 21.0799C9.58 21.0799 7.27 20.1299 5.57 18.4199C4.53505 17.3899 3.76627 16.1234 3.33 14.7299H2V10.1799H3.09C3.42024 8.57246 4.17949 7.08436 5.28719 5.87354C6.39489 4.66272 7.80971 3.77435 9.38153 3.30271C10.9534 2.83106 12.6235 2.79372 14.2149 3.19465C15.8062 3.59559 17.2593 4.41984 18.42 5.57995C19.6798 6.83553 20.5393 8.43623 20.89 10.1799H22V14.7299H21.94L18.38 17.9999L13.08 17.3999V15.7299H17.91L18.72 14.7599ZM9.27 11.7699C9.57 11.7699 9.86 11.8899 10.07 12.1099C10.281 12.3227 10.3995 12.6103 10.3995 12.9099C10.3995 13.2096 10.281 13.4972 10.07 13.7099C9.86 13.9199 9.57 14.0399 9.27 14.0399C8.64 14.0399 8.13 13.5399 8.13 12.9099C8.13 12.2799 8.64 11.7699 9.27 11.7699ZM14.72 11.7699C15.35 11.7699 15.85 12.2799 15.85 12.9099C15.85 13.5399 15.35 14.0399 14.72 14.0399C14.09 14.0399 13.58 13.5399 13.58 12.9099C13.58 12.6076 13.7001 12.3176 13.9139 12.1038C14.1277 11.8901 14.4177 11.7699 14.72 11.7699Z"
+                                                fill="white" />
+                                        </svg>
+                                    </div>
+                                    <span class="btn-text">Enquiry</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <!-- <div class="search-cas-result">
+                <div class="form-check tooltip-container">
+                    <input class="form-check-input" type="checkbox" id="selectAllCheckbox" [(ngModel)]="isSelectAll"
+                        (change)="toggleSelectAll()" [disabled]="!isLoggedIn" />
+            
+                </div>
+                <div class="cas-company-container">
+                    <div class="company-logo-container">
+                        <div class="premium-badge">
+                            <div class="premium-logo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22" fill="none">
+                                    <g filter="url(#filter0_d_1336_4784)">
+                                        <path
+                                            d="M5.29167 14.6667L3.375 4.58341L8.64583 9.16675L12 3.66675L15.3542 9.16675L20.625 4.58341L18.7083 14.6667H5.29167ZM18.7083 17.4167C18.7083 17.9667 18.325 18.3334 17.75 18.3334H6.25C5.675 18.3334 5.29167 17.9667 5.29167 17.4167V16.5001H18.7083V17.4167Z"
+                                            fill="#FFB53E" />
+                                        <path
+                                            d="M5.49862 14.4167L3.75531 5.24542L8.48179 9.3554L8.70515 9.54963L8.85927 9.29691L12 4.1469L15.1407 9.29691L15.2948 9.54963L15.5182 9.3554L20.2447 5.24542L18.5014 14.4167H5.49862ZM18.4583 17.4167C18.4583 17.6315 18.3849 17.7927 18.272 17.9007C18.1581 18.0096 17.9839 18.0834 17.75 18.0834H6.25C6.01607 18.0834 5.84193 18.0096 5.72801 17.9007C5.6151 17.7927 5.54167 17.6315 5.54167 17.4167V16.7501H18.4583V17.4167Z"
+                                            stroke="white" stroke-width="0.5" />
+                                    </g>
+                                    <defs>
+                                        <filter id="filter0_d_1336_4784" x="1.375" y="2.66675" width="21.25" height="18.6667"
+                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                            <feOffset dy="1" />
+                                            <feGaussianBlur stdDeviation="1" />
+                                            <feComposite in2="hardAlpha" operator="out" />
+                                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1336_4784" />
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1336_4784"
+                                                result="shape" />
+                                        </filter>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <span>PREMIUM</span>
+            
+                        </div>
+                        <div class="logo">
+                            <img src="/login/img/company-test-logo.png"  >
+                        </div>
+                    </div>
+                    <div class="company-detail">
+                        <div class="header">
+                            <div class="details">
+                                <span class="company-name">MedPlus Pharmacy,</span>
+                                <div class="company-location">Agra</div>
+                            </div>
+            
+                            <button class="btn single-enquiry-btn">
+                                <div class="btn-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M18.72 14.7599C19.07 13.9099 19.26 12.9999 19.26 11.9999C19.26 11.2799 19.15 10.5899 18.96 9.94995C18.31 10.0999 17.63 10.1799 16.92 10.1799C15.466 10.1815 14.0329 9.83347 12.7415 9.16517C11.4502 8.49687 10.3384 7.5279 9.5 6.33995C8.60396 8.51069 6.91172 10.2566 4.77 11.2199C4.73 11.4699 4.73 11.7399 4.73 11.9999C4.73 12.9547 4.91804 13.9 5.2834 14.7821C5.64875 15.6641 6.18425 16.4655 6.85933 17.1406C8.22272 18.504 10.0719 19.2699 12 19.2699C13.05 19.2699 14.06 19.0399 14.97 18.6299C15.54 19.7199 15.8 20.2599 15.78 20.2599C14.14 20.8099 12.87 21.0799 12 21.0799C9.58 21.0799 7.27 20.1299 5.57 18.4199C4.53505 17.3899 3.76627 16.1234 3.33 14.7299H2V10.1799H3.09C3.42024 8.57246 4.17949 7.08436 5.28719 5.87354C6.39489 4.66272 7.80971 3.77435 9.38153 3.30271C10.9534 2.83106 12.6235 2.79372 14.2149 3.19465C15.8062 3.59559 17.2593 4.41984 18.42 5.57995C19.6798 6.83553 20.5393 8.43623 20.89 10.1799H22V14.7299H21.94L18.38 17.9999L13.08 17.3999V15.7299H17.91L18.72 14.7599ZM9.27 11.7699C9.57 11.7699 9.86 11.8899 10.07 12.1099C10.281 12.3227 10.3995 12.6103 10.3995 12.9099C10.3995 13.2096 10.281 13.4972 10.07 13.7099C9.86 13.9199 9.57 14.0399 9.27 14.0399C8.64 14.0399 8.13 13.5399 8.13 12.9099C8.13 12.2799 8.64 11.7699 9.27 11.7699ZM14.72 11.7699C15.35 11.7699 15.85 12.2799 15.85 12.9099C15.85 13.5399 15.35 14.0399 14.72 14.0399C14.09 14.0399 13.58 13.5399 13.58 12.9099C13.58 12.6076 13.7001 12.3176 13.9139 12.1038C14.1277 11.8901 14.4177 11.7699 14.72 11.7699Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <span class="btn-text">Enquiry</span>
+                            </button>
+                        </div>
+                        <div class="body">
+                            <div class="dmfs">
+                                sd
+                            </div>
+                            <div class="regulations">
+                                dsf
+                            </div>
+                            <div class="resources">
+                                <ul class="links">
+                                    <li class="link">
+                                        <div class="link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="#000000" viewBox="0 0 256 256">
+                                                <path
+                                                    d="M232,152a12,12,0,0,1-12,12h-8v44a12,12,0,0,1-24,0V164h-8a12,12,0,0,1,0-24h40A12,12,0,0,1,232,152ZM92,172a32,32,0,0,1-32,32H56v4a12,12,0,0,1-24,0V152a12,12,0,0,1,12-12H60A32,32,0,0,1,92,172Zm-24,0a8,8,0,0,0-8-8H56v16h4A8,8,0,0,0,68,172Zm96,0a32,32,0,0,1-32,32h-4v4a12,12,0,0,1-24,0V152a12,12,0,0,1,12-12h16A32,32,0,0,1,164,172Zm-24,0a8,8,0,0,0-8-8h-4v16h4A8,8,0,0,0,140,172ZM36,108V40A20,20,0,0,1,56,20h96a12,12,0,0,1,8.49,3.52l56,56A12,12,0,0,1,220,88v20a12,12,0,0,1-24,0v-4H148a12,12,0,0,1-12-12V44H60v64a12,12,0,0,1-24,0ZM160,80h23L160,57Z">
+                                                </path>
+                                            </svg></div>
+                                        <div class="link-text">Presentation</div>
+                                    </li>
+                                    <li class="link">
+                                        <div class="link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="#000000" viewBox="0 0 256 256">
+                                                <path
+                                                    d="M216,36H40A20,20,0,0,0,20,56V200a20,20,0,0,0,20,20H216a20,20,0,0,0,20-20V56A20,20,0,0,0,216,36Zm-4,160H44V60H212ZM68,92A12,12,0,0,1,80,80h96a12,12,0,0,1,0,24H80A12,12,0,0,1,68,92Zm0,36a12,12,0,0,1,12-12h96a12,12,0,0,1,0,24H80A12,12,0,0,1,68,128Zm0,36a12,12,0,0,1,12-12h96a12,12,0,0,1,0,24H80A12,12,0,0,1,68,164Z">
+                                                </path>
+                                            </svg></div>
+                                        <div class="link-text">Broucher</div>
+                                    </li>
+                                    <li class="link">
+                                        <div class="link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="#000000" viewBox="0 0 256 256">
+                                                <path
+                                                    d="M232,44H160a43.86,43.86,0,0,0-32,13.85A43.86,43.86,0,0,0,96,44H24A12,12,0,0,0,12,56V200a12,12,0,0,0,12,12H96a20,20,0,0,1,20,20,12,12,0,0,0,24,0,20,20,0,0,1,20-20h72a12,12,0,0,0,12-12V56A12,12,0,0,0,232,44ZM96,188H36V68H96a20,20,0,0,1,20,20V192.81A43.79,43.79,0,0,0,96,188Zm124,0H160a43.71,43.71,0,0,0-20,4.83V88a20,20,0,0,1,20-20h60ZM164,96h32a12,12,0,0,1,0,24H164a12,12,0,0,1,0-24Zm44,52a12,12,0,0,1-12,12H164a12,12,0,0,1,0-24h32A12,12,0,0,1,208,148Z">
+                                                </path>
+                                            </svg></div>
+                                        <div class="link-text">Catelogue</div>
+                                    </li>
+                                    <li class="link">
+                                        <div class="link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="#000000" viewBox="0 0 256 256">
+                                                <path
+                                                    d="M168,120a12,12,0,0,1-5.12,9.83l-40,28A12,12,0,0,1,104,148V92a12,12,0,0,1,18.88-9.83l40,28A12,12,0,0,1,168,120Zm68-56V176a28,28,0,0,1-28,28H48a28,28,0,0,1-28-28V64A28,28,0,0,1,48,36H208A28,28,0,0,1,236,64Zm-24,0a4,4,0,0,0-4-4H48a4,4,0,0,0-4,4V176a4,4,0,0,0,4,4H208a4,4,0,0,0,4-4ZM160,216H96a12,12,0,0,0,0,24h64a12,12,0,0,0,0-24Z">
+                                                </path>
+                                            </svg></div>
+                                        <div class="link-text">Video</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div> -->
+
+        </div>
+        <div class="ads" style="display: none;"></div>
+    </div>
+
 </body>
+
 </html>

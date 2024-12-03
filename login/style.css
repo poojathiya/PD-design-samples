@@ -221,6 +221,9 @@ width: 12rem;
 .create-accnt strong {
     color: #0076d7
 }
+.create-accnt strong:hover {
+    color: #002966
+}
 
 .loader {
     width: 22px;
