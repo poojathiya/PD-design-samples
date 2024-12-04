@@ -25,7 +25,8 @@ body {
 
 .icon,
 .reset {
-    cursor: pointer
+    cursor: pointer;
+    
 }
 
 .search-container {
@@ -565,3 +566,42 @@ border-bottom-left-radius: 1.5rem;
     background-color: #002966;
 }
 
+
+.mob-nav-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+.mob-nav-bar .nav-list{
+        background-color: #f6fbff;
+           display: flex;
+           justify-content: space-evenly;
+            padding: 1rem 2rem 0 2rem;
+            list-style: none;
+            
+}
+.mob-nav-bar .nav-list .item{
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+flex-direction: column;
+color: #868e96;
+padding-bottom:.4rem
+
+
+}
+.mob-nav-bar .nav-list .item svg{
+    fill: #868e96;
+}
+
+.mob-nav-bar .nav-list .active{
+    border-bottom: 3px solid #003380;
+color: #003380;
+width: 10%;
+    
+}
+.mob-nav-bar .nav-list .active svg{
+    fill: #003380;
+}

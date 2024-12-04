@@ -1,0 +1,152 @@
+/* Import Google Fonts */
+@import url(https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap);
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    font-family: Outfit, sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: #495057;
+    overflow-x: hidden;
+}
+.logo a,
+.nav-links a {
+    text-decoration: none;
+    font-weight: 600
+}
+
+.nav {
+    height: 5.8rem;
+    width: 100%;
+    background-color: #f8f9fa;
+    box-shadow: rgba(149, 157, 165, .2) 0 8px 24px;
+    padding: 1.2rem 3.6rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-sizing: border-box
+}
+
+.logo a,
+.user-login .login {
+    color: #003380;
+    align-items: center;
+    display: flex
+}
+
+.logo {
+    width: 10rem;
+    padding: 1.2rem
+}
+
+.logo img {
+    width: 80%;
+    object-fit: contain
+}
+
+.logo a {
+    justify-content: start;
+    white-space: nowrap;
+    font-size: 2rem
+}
+
+.nav-links ul,
+.user-login {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem
+}
+
+.nav-links li {
+    margin-left: 2rem
+}
+
+.nav-links a {
+    font-size: 1.4rem;
+    color: #495057;
+    transition: color .3s
+}
+
+.nav-links li:hover {
+    border-bottom: 2px solid #003380
+}
+
+.nav-links a:hover {
+    color: #003380
+}
+
+.user-login {
+    gap: 3rem
+}
+
+.user-login .login {
+    gap: .8rem;
+    justify-content: center
+}
+
+.login svg {
+    fill: #003380;
+    margin-top: .4rem
+}
+
+.sign-up-btn {
+    background-color: #003380;
+    border: 1px solid #003380;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 1rem;
+    border-radius: 1.2rem;
+    display: flex;
+    gap: .8rem;
+    align-items: center;
+    justify-content: center
+}
+
+.sign-up-btn svg {
+    fill: #fff;
+    margin-top: .4rem
+}
+
+
+
+@media (max-width:48em) {
+    html {
+        font-size: 50%
+    }
+
+    .nav {
+        padding: 1.2rem
+    }
+        .nav-links ul {
+            display: none;
+            position: absolute;
+            top: 6rem;
+            right: 1rem;
+            background-color: #003380;
+            padding: 1rem;
+            border-radius: 5px;
+            width: 200px;
+            flex-direction: column
+        }
+    
+        .nav-links.active ul {
+            display: flex
+        }
+}

@@ -10,4 +10,5 @@ and the background color of the login form inputs.
 .show-pwd svg,
 and for hover states. 
 #343a40 — Used for the text color in .display-text and .checkboxLabel. 
-#ff6b6b — Used for error message text color (.error-message).
+#ff6b6b — Used for error message text color (.error-message).4
+#308448

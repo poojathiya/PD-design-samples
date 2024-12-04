@@ -1,0 +1,612 @@
+/* Import Google Fonts */
+@import url(https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap);
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    font-family: Outfit, sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: #495057;
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: #f7f7f7b9;
+}
+.vission-container{
+background-color: #d0e9ff68;
+
+
+}
+.dark-blue{
+    background-color: #003380;
+}
+
+.blue {
+    color: #0076d7;
+}
+
+.green {
+    color: #308448;
+}
+
+.content {
+    display: grid;
+    max-width: 130.4rem;
+    margin: 4rem auto;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr 2fr;
+    padding: 2rem;
+
+}
+
+.pricing-plan, .service-offered {
+    display: flex;
+    flex-direction: column;
+    max-width: 130.4rem;
+    margin: 4rem auto;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.content .header,
+.pricing-plan .header,
+.service-offered .header {
+    display: flex;
+    align-items: center;
+    font-size: 3.2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    gap: .8rem;
+    grid-column: 2 / 3;
+
+    position: relative;
+    top: 32%;
+    text-align: center;
+    justify-content: start;
+        padding-left: 4rem;
+}
+
+.content .image {
+    width: 40rem;
+    object-fit: contain;
+
+    grid-column: 1 / 2;
+    display: flex;
+    position: relative;
+    margin: auto;
+
+}
+
+.box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -7%;
+    left: 5%;
+    /* z-index: 1000; */
+    border: 2px solid rgba(73, 80, 87, 0.127);
+
+    border-radius: 12px;
+
+}
+
+.content .image img {
+    width: 100%;
+    z-index: 1000;
+    position: relative;
+    border-radius: 1.2rem;
+
+}
+
+.content .body {
+    font-size: 1.6rem;
+    color: #495057;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem 2rem 4rem;
+
+}
+
+.content .body .body-text,
+.pricing-plan .body-text ,
+.service-offered .body-text{
+    color: #212529;
+    margin-top: 2rem;
+
+}
+
+
+.content .body .points {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+}
+
+.content .body .points .point {
+    display: flex;
+    align-items: flex-start;
+    color: #495057;
+}
+
+.content .body .points .point svg {
+    fill: #ff7500;
+    stroke-width: 3rem;
+    margin-top: .4rem;
+
+}
+/* *****Vission mission */
+.vission{
+   display: flex;
+   
+    margin: 0 auto;
+        padding-top: 5rem;
+  
+}
+.vission .text{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    top: 0;
+    text-align: justify;
+}
+.vission .header{
+    position: relative;
+        /* Make the parent relative for the pseudo-element */
+        top: 18%;
+        text-align: start;
+        justify-content: start;
+        padding-left: 4rem;
+        padding-bottom: 1rem;
+        
+}
+.vission .header:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 4rem;
+    
+    width: calc(100% - 4rem);
+    height: .1rem;
+    background-color: #0076d7;
+    margin-top: 2px;
+}
+ .mobile {
+     display: none !important;
+ }
+.vission .body .values{
+    padding: 0;
+}
+.vission .body .value{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+.vission .body .value svg{
+    margin-top: .4rem;
+}
+.vission .image{
+    width: 32%;
+}
+/* ******Our people**** */
+.founder{
+ margin: 0 auto;
+   display: flex;
+   align-items: center;
+   border-bottom: 1px solid #d0e9ff68;
+}
+.vission .people{
+    width: 20%;
+}
+
+.founder .body{
+    color: #fff;
+    line-height: 1.5;
+    
+}
+.founder .body p{
+    margin-bottom: 0;
+}
+.founder .name{
+    color: #99c8ef;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+
+
+}
+.founder .designation{
+    color: #99c8ef;
+    font-size: 1.4rem;
+
+}
+.founder-image{
+    height: 10%;
+}
+/* Service Offerd */
+.service-offered{
+
+}
+.services{
+    display: flex;
+    gap: 4rem;
+    list-style: none;
+
+}
+.service{
+max-width: 20rem;
+padding: 2rem;
+border-radius: 1.2rem;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+display: flex;
+flex-direction: column;
+gap: 2rem;
+justify-content: center;
+align-items: center;
+margin-top: 5rem;
+transition: transform 0.3s ease;
+
+}
+.service:hover {
+    transform: scale(1.1);
+    background-color: #003380;
+    
+}
+
+
+.service-icon svg{
+    width: 5rem;
+    height: 5rem;
+    fill: #308448;
+}
+.service:hover .service-icon svg {
+    fill: #6ea97f;
+    transition: fill 0.3s ease;
+}
+.serice-type {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #0076d7;
+}
+.service:hover .serice-type{
+    color: #fff;
+    transition: fill 0.3s ease;
+}
+.service-description {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: #495057;
+text-align: center;
+    font-weight: 500;
+    
+}
+.service:hover .service-description {
+    color: #99c8ef;
+    transition: fill 0.3s ease;
+}
+ .line{
+    width: 2rem;
+    border-bottom: 3px solid #0076d7;
+
+}
+.service:hover .line {
+    border-bottom: 3px solid #e6f1fb;
+
+    transition: fill 0.3s ease;
+}
+
+/* ****Pricing plan****** */
+.pricing-plan {
+    background-color: #fff;
+    border-radius: 1.2rem
+}
+
+.pricing-plan .body-text,
+.service-offered .body-text {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    word-spacing: 2px
+}
+
+.plan-btn-container {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem
+}
+
+.plan-btn {
+    background-color: transparent;
+    border: 1px solid #0076d7;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #495057;
+    border-radius: .5rem;
+    padding: 1.6rem 4rem
+}
+
+.plan-btn-container .active {
+    color: #d0e9ff;
+    background-color: #003380
+}
+
+.plan-btn-container .active .white {
+    color: #fff
+}
+
+.plan-table {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    margin: 3rem;
+    justify-content: center;
+    position: relative
+}
+
+.corporate-plan,
+.individual-plan,
+.plan-table .plan-header {
+    display: flex;
+    flex-direction: column
+}
+
+.plan-table .corporate-plan .value,
+.plan-table .individual-plan .value,
+.plan-table .plan-header .value {
+    font-size: 1.4rem;
+    align-items: flex-start;
+    justify-content: start;
+    padding: 2rem 8rem 2rem 2rem;
+    border-bottom: 1px solid #0076d765;
+    font-weight: 500;
+    color: #868e96
+}
+
+.plan-table .active {
+    color: #495057
+}
+
+.corporate-plan {
+    background-color: #fff8f2
+}
+
+.corporate-plan .value {
+    padding: 2rem 8rem !important;
+    border-bottom: 1px solid #f6a31d79 !important
+}
+
+.individual-plan .value {
+    padding: 2rem 8rem !important;
+    border-bottom: 1px solid #dee2e6
+}
+
+.plan-table .plan-header {
+    background-color: #d0e9ff
+}
+
+.plan-table .plan-header .value {
+    color: #0076d7;
+    font-weight: 600;
+    text-transform: uppercase;
+    word-spacing: 2px
+}
+
+.individual-plan .value:first-child {
+    color: #308448;
+    font-weight: 600;
+    text-transform: uppercase
+}
+
+.corporate-plan .value:first-child {
+    color: #f6a31d;
+    font-weight: 600;
+    text-transform: uppercase
+}
+
+.sub-text {
+    position: absolute;
+    bottom: -10%;
+    right: 0;
+    font-size: 1.2rem;
+    color: #ff7500;
+    font-weight: 500
+}
+footer{
+
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+
+}
+
+.address, .contact{
+    color: #d0e9ff;
+    width: 35rem;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.6;
+  
+}
+.links{
+    list-style: none;
+    color: #99c8ef;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.6rem;
+}
+.contact{
+    font-size: 1.6rem;
+
+}
+.contact span{
+    color: #fff;
+    margin-left: 1rem;
+}
+.social-media-links{
+    display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+}
+.social-media-links .item svg{
+    fill: #99c8ef;
+    height: 2.4rem;
+    width: 2.4rem;
+}
+
+@media (max-width:48em) {
+    html {
+        font-size: 50%
+    }
+
+    .content,.vission {
+        display: block;
+       
+    }
+        .vission .header:after {
+           display: none;
+        }
+
+    .content .image {
+        width: 100%;
+        height: 25rem;
+    }
+
+    .box {
+        display: none;
+    }
+
+    .content .header {
+        margin-bottom: 2rem;
+        border-bottom: 2px solid rgba(73, 80, 87, 0.127);
+        padding-bottom: 1rem;
+        justify-content:center;
+            padding-left: 0
+    }
+
+    .content .body {
+        padding: 0;
+        text-align: justify;
+        color: #495057;
+    }
+
+    .content .body .points {
+        padding: 1rem;
+    }
+    .founder{
+        display: flex;
+        flex-direction: column;
+    }
+        .founder .body {
+            color: #fff;
+           
+    
+        }
+    .services {
+     
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 0;
+    }
+    
+
+    .pricing-plan .body-text,
+    .service-offered .body-text {
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
+
+    .plan-btn-container {
+        margin-top: 3rem;
+        display: flex;
+        /* grid-template-columns: 1fr 1fr; */
+        gap: 1rem;
+        flex-direction: column;
+        white-space: nowrap;
+    }
+
+    .plan-btn {
+
+        padding: 2rem;
+    }
+
+    .individual-plan .value,
+    .corporate-plan .value,
+    .plan-header .value {
+        padding: 1rem !important;
+    }
+
+    .sub-text {
+     bottom: -15%;
+    }
+    .vission .text{
+        display: inline;
+    }
+    
+    
+    .founder-header{
+        display: flex;
+        gap: 2rem;
+       justify-content: flex-start;
+       align-items: center;
+    }
+    .founder-header .mobile{
+        width: 10rem;
+     
+        
+        overflow: hidden;
+    }
+    .founder-header .mobile img{
+        width: 100%;
+        border-radius: 1.2rem;
+    }
+        
+.vission .mobile{
+    display: inline!important;
+
+}
+.vission .desktop{
+    display: none !important;
+}
+                .desktop {
+                    display: none;
+                }
+        
+               .mobile {
+                    display: block !important;
+                }
+                .footer{
+                    justify-content: flex-start;
+                }
+                footer .links{
+                    flex-direction: column;
+                    gap: 2rem;
+                    line-height: 1.5;
+                }
+                footer .social-media-links{
+justify-content: start;
+                }
+}
