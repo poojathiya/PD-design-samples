@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+*,
+body {
+    margin: 0;
+}
+
+.login-background,
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Outfit, sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: #555;
+}
+.modal-card {
+
+    max-width: 130.4rem;
+    border-radius: .9rem;
+    padding: 1rem 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.card-header,
+.carousal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-header .header {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #0076d7;
+    margin: 0 auto;
+
+}
+
+.card-header .close {
+    margin-left: auto;
+    width: 3rem;
+    height: 3rem;
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close svg {
+    fill: #555;
+}
+.card-body .item .title {
+    font-size: 1.4rem;
+    color: #868e96;
+    text-transform: capitalize;
+    margin-bottom: .4rem;
+}
+
+.card-body .item .value {
+    font-size: 1.6rem;
+    color: #343a40;
+
+}
+.enquiry-form-body .chemical-message input,
+.enquiry-form-body input {
+    font-style: normal;
+    line-height: normal;
+    margin-left: .4rem;
+    margin-right: .4rem
+}
+
+.enquiry-form-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem
+}
+
+.enquiry-form-body .label {
+        font-size: 1.4rem;
+        
+            background: #fff;
+            color: #868e96;
+            padding: .8rem;
+        }
+.enquiry-form-body .custom-comments{
+    outline: none;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    
+}
+.enquiry-form-body .field-set {
+    width: 70%;
+    border-radius: 5px;
+    border: 1px solid #0076d7;
+    padding: 2rem;
+    position: relative
+}
+
+.enquiry-form-body ul {
+    margin: none;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    width: 70%
+}
+
+.enquiry-form-body li {
+    color: var(--Black-75, var(--Color-75, rgba(0, 0, 0, .75)));
+    font-family: Outfit;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: .8rem
+}
+
+.enquiry-form-body .chemical-info {
+    display: flex;
+    font-size: 1.6rem;
+    color: #495057;
+    align-items: baseline
+}
+
+.enquiry-form-body input {
+    outline: 0;
+    width: 9.4rem;
+    border: none;
+    border-radius: 0;
+    border-bottom: .1rem solid #9999991c;
+    color: #495057;
+    font-family: Outfit;
+    padding: 0
+}
+
+.mr-btm {
+    margin-bottom: 2rem
+}
+
+textarea {
+    width: 100%;
+    padding: 1rem;
+    border: .1rem solid #ccc;
+    border-radius: .4rem;
+    font-family: Arial, sans-serif;
+    font-size: 1.4rem;
+    white-space: pre-wrap
+}
+
+.enquiry-form-body input::placeholder {
+    color: #bdbbbb81 !important
+}
+
+.enquiry-form-body .chemical-message {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap
+}
+
+.enquiry-form-body .chemical-message input {
+    outline: 0;
+    width: 5.8rem;
+    text-align: center;
+    border: none;
+    border-bottom: .1rem solid #9999991c;
+    color: #495057;
+    font-family: Outfit, sans-serif;
+    padding: .4rem 0;
+    max-width: 15rem
+}
+
+.chemical-message span {
+    font-size: 1.6rem;
+    color: #495057;
+    margin-right: .4rem
+}
+
+.enquiry-form-body input::placeholder {
+    color: #bdbbbb81;
+    font-size: 1.4rem
+}
+
+.enquiry-form-body .checkbox {
+    position: relative;
+    overflow: hidden;
+    top: 0 !important;
+    left: 0 !important
+}
+
+.enquiry-form-body .checkbox__input {
+    position: absolute;
+    top: -10rem;
+    left: -10rem
+}
+
+.enquiry-form-body .checkbox__inner {
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    border: .1rem solid #626262;
+    background: center no-repeat
+}
+
+.sign-info {
+    display: flex;
+    flex-direction: column
+}
+
+.sign-info span {
+    font-size: 1.6rem;
+    color: #495057
+}
+
+.sign-info .value {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    color: #495057
+}
+
+.enquiry-form-body .checkbox__input:checked+.checkbox__inner {
+    border-color: #ff7500;
+    background-color: #ff7500;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='14px' height='10px' viewBox='0 0 14 10' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 59.1 (86144) - https://sketch.com --%3E%3Ctitle%3Echeck%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='ios_modification' transform='translate(-27.000000, -191.000000)' fill='%23FFFFFF' fill-rule='nonzero'%3E%3Cg id='Group-Copy' transform='translate(0.000000, 164.000000)'%3E%3Cg id='ic-check-18px' transform='translate(25.000000, 23.000000)'%3E%3Cpolygon id='check' points='6.61 11.89 3.5 8.78 2.44 9.84 6.61 14 15.56 5.05 14.5 4'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-size: 1.4rem 1rem
+}

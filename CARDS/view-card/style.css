@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+*,
+body {
+    margin: 0;
+}
+
+.login-background,
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Outfit, sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: #555;
+}
+
+.modal-card {
+    width: fit-content;
+    max-width: 130.4rem;
+    border-radius: .9rem;
+    padding: 1rem 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-header .header {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #0076d7;
+    margin: 0 auto;
+
+}
+
+.card-header .close {
+    margin-left: auto;
+    width: 3rem;
+    height: 3rem;
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close svg {
+    fill: #555;
+}
+.card-body{
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.card-body .item{
+
+}
+.card-body .item .title{
+    font-size: 1.4rem;
+    color: #868e96;
+    text-transform: capitalize;
+    margin-bottom: .4rem;
+}
+.card-body .item .value{
+    font-size: 1.6rem;
+    color: #343a40;
+
+}
+
+@media (max-width: 48em) {
+    .card-body{
+        grid-template-columns: 1fr;
+    }
+}

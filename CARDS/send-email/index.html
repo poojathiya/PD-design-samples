@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+        <div class="modal-card">
+            <div class="card-header">
+                <span class="header">Send Enquiry</span>
+                <div class="close"><span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                            <path
+                                d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z">
+                            </path>
+                        </svg>
+                    </span></div>
+            </div>
+            <div class="enquiry-form-body">
+                <div>
+                <span class="label" for="activeFilter">Subject</span>
+                <div class="field-set">
+                    <div class="chemical-info">
+                        <span>
+                            Enquiry For: <strong>{{ manufacturers[0].dmf[0].casNo }}</strong>
+                            <span class="info-message">&nbsp;({{ manufacturers[0].dmf[0].chemicalName }})</span>
+                        </span>
+                    </div>
+                    
+                </div>
+                </div>
+                <div>
+        <span class="label" for="activeFilter">Message</span>
+                <div class="field-set">
+                    <div class="chemical-message">
+                        <span>Dear Sir/Madam,</span>
+                        <div>
+                            <span>Request your competitive offer with supply lead time for</span>
+                            <input type="number" [(ngModel)]="enquiry.messageQuantity1" name="messageQuantity1" placeholder="10 Kgs"
+                                autofocus />
+                            <span>/</span>
+                            <input type="number" [(ngModel)]="enquiry.messageQuantity2" name="messageQuantity2"
+                                placeholder="50 Kgs" />
+                            <span>/</span>
+                            <input type="number" [(ngModel)]="enquiry.messageQuantity3" name="messageQuantity3"
+                                placeholder="100 Kgs" />
+                            <input type="text" [(ngModel)]="enquiry.quantityType" value="Kg" />
+                            <span>of</span>
+                        </div>
+                        <strong>{{ manufacturers[0].dmf[0].casNo }}</strong>
+                        <div class="info-message">
+                            &nbsp;({{ manufacturers[0].dmf[0].chemicalName }})
+                        </div>
+                        <span>along with</span>
+                    </div>
+                   
+                </div>
+                </div>
+            
+                <ul>
+                    <li>
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input" [(ngModel)]="enquiry.specification"
+                                name="specification" />
+                            <span class="checkbox__inner"></span>
+                        </label>
+                        <span>Specification / CoA from the latest batch</span>
+                    </li>
+                    <li>
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input" [(ngModel)]="enquiry.packSize" name="packSize" />
+                            <span class="checkbox__inner"></span>
+                        </label>
+                        <span>Pack Size</span>
+                    </li>
+                    <li>
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input" [(ngModel)]="enquiry.batchSize" name="batchSize" />
+                            <span class="checkbox__inner"></span>
+                        </label>
+                        <span>Batch Size</span>
+                    </li>
+                    <li>
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input" [(ngModel)]="enquiry.isCustomComments"
+                                (change)="toggleCustomComments()" name="isCustomComments" />
+                            <span class="checkbox__inner"></span>
+                        </label>
+                        <span>Custom Comments</span>
+                    </li>
+                </ul>
+            
+                
+                <div *ngIf="enquiry.isCustomComments" class="field-set">
+                    
+                    <div contenteditable="true" class="custom-comments" [(ngModel)]="enquiry.customComments"
+                        (input)="onInput($event)" (keydown)="onKeyDown($event)" placeholder="Type your custom comments here..."
+                        rows="3"></div>
+                </div>
+            
+                <span class="label" for="activeFilter">Signature</span>
+                <div class="field-set">
+                    <div class="sign-info">
+                        <span>Regards,</span>
+                        <div class="value">{{ userName }}</div>
+                    </div>
+                   
+                </div>
+            
+                <div class="button-container">
+                    <button type="button" class="form-btn-primary" (click)="submitEnquiry()">
+                        Submit
+                    </button>
+                    <button type="button" class="form-btn-secondary" (click)="cancelEnquiry()">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+
+    </div>
+</body>
+</html>

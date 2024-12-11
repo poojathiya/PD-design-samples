@@ -475,6 +475,64 @@ footer{
     width: 2.4rem;
 }
 
+
+
+
+/* ******** */
+.plans .table {
+    margin-top: 40px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .15);
+    text-align: left;
+    font-weight: 600;
+    font-family: outfit;
+    color: #3d3d3d;
+    border: 1px solid #b7b7b7
+}
+
+.plans .table tbody,
+.plans .table tfoot,
+.plans .table thead,
+.plans .table tr {
+    border-style: none;
+    border-bottom: 1px solid #b7b7b7
+}
+
+.plans .table td,
+.table th {
+    height: 64px;
+    vertical-align: middle;
+    padding-left: 30px
+}
+
+.plans .table>thead {
+    background-color: #d0e9ff;
+    color: var(--blue);
+    height: 72px;
+    vertical-align: middle
+}
+
+.plans .table tr.individual {
+    background-color: #f1f8ff
+}
+
+.plans .table tr.corporate {
+    background-color: #fff8f2
+}
+
+.plans .table tr.corporate th {
+    color: var(--premium-gold)
+}
+
+.plans .table td.inactive {
+    color: #a8a8a8
+}
+
+.plans p.gst-info {
+    text-align: right;
+    color: var(--orange);
+    float: right;
+    margin-right: 40px
+}
 @media (max-width:48em) {
     html {
         font-size: 56%
